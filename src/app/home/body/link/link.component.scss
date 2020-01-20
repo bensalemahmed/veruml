@@ -1,0 +1,21 @@
+svg {
+    position:absolute;
+    pointer-events: none;
+  }
+  
+  svg path {
+    cursor: pointer;
+    pointer-events: all;
+  }
+  
+  svg path:hover, svg path[selected=true] {
+    cursor: pointer;
+    stroke-width: 5px;
+  }
+  
+  #content {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,18 @@
+<div class="row example-boundary">
+  <div class="col-12">
+    <div class="example-box border" style="width: 50px;" *ngFor="let a of list; let i = index" cdkDrag
+      [cdkDragFreeDragPosition]="pos[i]" (cdkDragMoved)="dragStarted($event)">
+      <app-card appLink [appEndingLinks]="[link1]" title="{{ a }}"></app-card>
+    </div>
+    <div class="example-box border" style="width: 50px;" *ngFor="let a of list; let i = index" cdkDrag
+    [cdkDragFreeDragPosition]="pos[i]" (cdkDragMoved)="dragStarted($event)">
+    <app-card appLink [appStartingLinks]="[link1]" title="{{ a }}"></app-card>
+  </div>
+  </div>
+  
+</div>
+<app-card appLink [appStartingLinks]="[link1]" title="Card 8"></app-card>
+<app-link #link1 color="#93BA6B">
+  <button (click)="clicked()">i</button>
+</app-link>
+ 
